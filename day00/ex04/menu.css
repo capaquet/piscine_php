@@ -1,0 +1,36 @@
+ul {list-style: none; display: block; position: absolute;}
+
+ul ul {display: none;}
+li:hover .menu2 {display: block; left: 220px; margin-top: -25px;}
+li:hover li:hover {background-color: #ffbaf6;}
+ul>li>ul>li:hover .menu3 {display: block; left: 220px; margin-top: -19px}
+ul>li>ul>li>ul>li:hover .menu4 {display: block; left: 220px; margin-top: -19px}
+
+.menu1
+{
+  font-family: arial;
+  font-size: 20px;
+  text-align: center;
+  background-color: #efefef;
+  border-color: grey;
+  border-width: 1px;
+  font-weight: bold;
+  width: 220px;
+  border-style: solid;
+  border-radius: 5px;
+}
+.menu3 li {font-size: 16px; background-color: #fcfcfc;}
+.menu4 li {font-size: 16px; background-color: #b6caea;}
+
+ul ul li
+{
+  font-size: 16px;
+  text-align: center;
+  background-color: #b9c2f7;
+  font-weight: bold;
+  width: 220px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 5px;
+}

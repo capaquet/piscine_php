@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BALLON</title>
+		<style media="screen">
+#ballon {border-radius: 200px; margin: auto; margin-top: 300px}
+		</style>
+	</head>
+
+
+	<body>
+		<div id="ballon" onClick="gonfle()" onmouseout="degonfle()"></div>
+
+		<script  type = "text/javascript">
+var ballon = document.getElementById('ballon');
+ballon.style.height = '200px';
+ballon.style.width = '200px';
+ballon.style.backgroundColor = 'red';
+function gonfle()
+{
+	ballon.style.height = parseInt(ballon.style.height, 10) + 10 + 'px';
+	ballon.style.width = parseInt(ballon.style.width, 10) + 10 + 'px';
+
+	if (parseInt(ballon.style.height, 10) > 420)
+	{
+		ballon.style.height = '200px';
+		ballon.style.width = '200px';
+	}
+	if (ballon.style.backgroundColor == 'red')
+		ballon.style.backgroundColor = "green";
+	else if (ballon.style.backgroundColor == 'green')
+		ballon.style.backgroundColor = 'blue';
+	else
+		ballon.style.backgroundColor = 'red';
+}
+
+function degonfle()
+{
+	if (parseInt(ballon.style.height, 10) > 200)
+	{
+		ballon.style.height = parseInt(ballon.style.height, 10) - 5 + 'px';
+		ballon.style.width = parseInt(ballon.style.width, 10) - 5 + 'px';
+		if (ballon.style.backgroundColor === 'green')
+			ballon.style.backgroundColor = 'red';
+		else if (ballon.style.backgroundColor === 'red')
+			ballon.style.backgroundColor = "blue";
+		else
+			ballon.style.backgroundColor = 'green';
+	}
+}
+		</script>
+
+	</body>
+</html>

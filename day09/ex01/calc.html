@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Calculettttttte</title>
+	</head>
+	<body>
+		<div>
+			<input id='p1' type="text" name="p1">
+			<select id='ope' >
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select>
+			<input id='p2' type="text" name="p2">
+			<input type="button" name="Try me" value="Try me" onclick="calcul()">
+		</div>
+
+		<script type="text/javascript">
+
+setInterval(time, 30000);
+function time()
+{alert('Please, use me...');}
+
+function calcul()
+{
+	var p1 = parseInt(document.getElementById('p1').value, 10);
+	var p2 = parseInt(document.getElementById('p2').value, 10);
+	var ope = document.getElementById('ope').value;
+	if (p1 < 0 || p2 < 0)
+		alert('Error :(');
+				else if (p2 == 0 && (ope == '/' || ope == '%'))
+				alert('It\'s over 9000!');
+				else
+				{
+					if (ope == '+')
+						var res = p1 + p2;
+					else if (ope == '-')
+						var res = p1 - p2;
+					else if (ope == '/')
+						var res = p1 / p2;
+					else if (ope == '*')
+						var res = p1 * p2;
+					else if (ope == '%')
+						var res = p1 % p2;
+					console.log(res);
+					alert(res);
+				}
+				}
+		</script>
+
+	</body>
+</html>
